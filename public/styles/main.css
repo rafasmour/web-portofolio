@@ -1,0 +1,58 @@
+/* size main content and make it scrollable without a scrollbar */
+.main{
+    background: rgba(35, 58, 31, 0.5);
+    width: 100%;
+    height: 80%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.main::-webkit-scrollbar{
+    display: none;  
+}
+/* properties for headers of main content */
+.header{
+    font-size: clamp(2em, 4vw + 1vh, 6em);
+    text-align: center;
+    color: rgb(198, 189, 189);
+    font-weight:bolder;
+    text-shadow: 0 0 4vw rgb(59, 45, 45), 0 0 5vw rgb(122, 97, 97);
+    margin-inline: auto;
+    width: 50%;
+    text-align: center;
+}
+/* properties for article text, links and images*/
+.article{
+    font-size: clamp(1em, 2vw + 1vh, 3em);
+    text-align: center;
+    color: rgb(200, 168, 190);
+    text-shadow: 0 0 3vw rgb(110, 79, 79), 0 0 5vw rgb(122, 97, 97);
+    width: 50%;
+    font-weight:bolder;
+    margin-inline: auto;
+}
+.article-big-image{
+    width: 50vw;
+}
+.article-small-image{
+    width: 35vw;
+}
+.mainLink{
+    font-size: clamp(2em, 4vw, 3em);
+    text-decoration: none;
+    background-color: rgb(150, 119, 34);
+    border-radius: 1vw;
+    padding: 1vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.5s ease-out; 
+}
+.mainLink:hover{
+    background-color: rgb(177, 78, 154);
+    color: rgb(180, 153, 30);
+    box-shadow: 0 0 1vw rgb(173, 92, 154), 0 0 1.5vw rgb(182, 124, 169), 0 0 2vw rgb(197, 155, 188);
+}
+.mainLink:not(:hover){
+    background-color: rgb(150, 146, 34);
+    color: rgb(141, 180, 51);
+}

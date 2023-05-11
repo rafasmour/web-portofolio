@@ -1,0 +1,74 @@
+/* card container for cards*/
+.card-container{
+    display:grid;
+    row-gap: 3em;
+    column-gap: 2em;
+    grid-template-columns: 50% 50%;
+    width: 50%;
+    height: auto;
+    margin-bottom: 2%;
+    margin-inline: auto;
+}
+/* give cards properties to contain an image text and a link*/
+.card{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% 50% 10%;
+    background: linear-gradient(to top, #755320 0%, #c09c6c 100%);
+    border-radius: 2vw;
+    box-shadow: 1vw 1vh 1vw 1vh rgba(0, 0, 0, 0.129), 1.5vw 1.5vw 2vw 2vh rgb(77, 53, 9);
+    transform: scale(var(--card-scale, 1.0));
+    margin-inline: auto;
+    overflow: hidden;
+}
+.card-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.card-info{
+    text-decoration: none;
+    font-size: clamp(.5rem, 1rem + 0.5vw , 2rem);
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:700;
+    color:rgb(255, 255, 255);
+}
+.card-button{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-self: center;
+    background: linear-gradient(to bottom, rgb(228, 186, 122) 0%, rgba(151, 102, 39, 0.7) var(--button-bg, 110%));
+    border:none;
+    font-weight: bold;
+    color:rgb(109, 52, 52);
+    font-size: clamp(0.5rem, 1rem + 0.6vw , 2rem);
+}
+/* hover events to make the card resize and interactive */
+.card-button:hover{
+    --button-bg: 80%;
+    cursor: pointer;
+    background-size: 1000%;
+    transition: 1s ease;
+}
+.card:hover{
+    --card-scale: 1.1;
+    transition: 1s ease;
+}
+.card:not(:hover){
+    --card-scale: 1.0;
+    transition: 1s ease;
+}
+/* adjust grid columns for mobile devices */
+@media only screen and (max-width: 1200px){
+    .card-container{
+        grid-template-columns: 100%;
+        row-gap: 10em;
+    }
+    .card{
+        height: 120%;
+        width: 100%;
+    }
+}

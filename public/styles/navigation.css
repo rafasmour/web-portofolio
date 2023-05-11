@@ -1,0 +1,144 @@
+/* transition for when the navigation menu is visitted */ 
+@keyframes navTransition {
+    0% {background-color: rgba(243, 247, 1, 0.349);}
+    100% {background-color: linear-gradient(to top left, rgba(247, 231, 1, 0.551) 0%, rgba(255, 190, 50, 0) 80%);}
+}
+/* properties for sandwich menu for mobile devices*/
+input[type=checkbox]{
+    display: none;
+}
+.navToggle{
+    display: none;
+    font-size: 6vw;
+    color:rgb(221, 126, 62);
+    margin-right: 1vh;
+    cursor: pointer;
+    user-select: none;
+}
+/* navigation menu properties for logo and link menu */
+.logo{
+    margin-left: 5vw;
+    width: max-content;
+    height: 100%;
+    display: block;
+    padding: 0;
+}
+.logo img{
+    height: 100%;
+}
+.logo:hover{
+    background-color: rgb(25,160,25, 0.1);
+    border-radius: 1vw;
+    transition: 0.5s ease;
+}
+.logo:not(:hover){
+    transition: 0.5s ease;
+}
+.navigation{
+    overflow: hidden;
+    background: linear-gradient(to bottom right, rgba(82, 63, 29, 0.9) 0%, rgba(54, 38, 4, 0.651) 80%);
+    display: flex;
+    justify-content:space-between;
+    height: 10%;
+}
+.Menu{
+    margin: 0; 
+    padding-right: 2vw;
+    gap: 1em;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* link properties and hover events to make links interactive */
+.Menu:hover{
+    animation-name: navTransition;
+    animation-fill-mode: backwards;
+    animation-duration: 1s;
+}
+.menu-link{
+    text-decoration: none;
+    font-size: clamp(2rem, .5rem + 1.5vw, 4rem);
+    color: rgb(201, 180, 143);
+    font-family: inherit;
+    font-weight: bold;
+}
+.menu-link:hover {
+    color: rgba(243, 229, 31, 0.726);
+    text-shadow: 0 0 3vw rgb(139, 139, 197), 0 0 3.5vw rgb(161, 161, 194), 0 0 4vw rgb(171, 171, 205);
+    transition: 1s ease;
+}
+.navigation img{
+    padding-left: 10%;
+}
+/* properties for the dropdown menu */
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    background: linear-gradient(to bottom right, rgba(102, 80, 20, 0.9) 0%,rgba(221, 114, 14, 0.651) 80%);
+    padding-left: 0;
+    list-style-type: none;
+}
+.dropdown-content {
+    display: none;
+    position: fixed;
+    padding: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-button{
+    background: none;
+    cursor: pointer;
+}
+.dropdown-check:checked ~ .dropdown-content {
+    display: block;
+    transform: scale(1);
+    transition: 0.3s ease;
+}
+.dropdown-check:not(:checked) ~ .dropdown-content {
+    display: block;
+    transform: scale(0);
+    transition: 0.3s ease;
+} 
+/* adjust properties for mobile devices */
+@media only screen and (max-width: 1024px){
+    .Menu { 
+        display: block;
+        position: absolute;
+        z-index: 1;
+        margin-top: 10vh;
+        width: 100%;
+        height: min-content;
+        padding-top:2vh;
+        padding-bottom: 1vh;
+        padding-inline: 0;
+        background: linear-gradient(to bottom right, rgba(119, 88, 21, 0.9) 0%, rgba(150, 168, 25, 151) 80%);
+        outline: 0.25vh solid rgb(128, 73, 0);
+        text-align: center;
+        transition: 0.2s ease-in;
+    }
+
+    .menu-button:checked ~ .Menu{
+        display: block;
+    }
+    .menu-button:not(:checked) ~ .Menu{
+        display: none;
+    }
+    .dropdown-content{
+        width: 100%;
+    }
+    .navToggle {
+        display: inline-block;
+        align-self: center;
+        margin-right: 5%;
+        transition: 0.5s;
+    }
+
+    .navToggle:active {
+        color: blue;
+    }
+
+}

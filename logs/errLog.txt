@@ -1,0 +1,4 @@
+20230508	10:17:47	13877a20-cb25-4e63-85bb-946154b93832	Error: ENOENT: no such file or directory, stat 'C:\Users\rafas\OneDrive\Desktop\server\html\index.html'
+20230508	10:40:21	6aabea44-32d1-4477-aada-3cc86a4a2375	Error: ENOENT: no such file or directory, stat 'C:\Users\rafas\OneDrive\Desktop\server\views\404.html'
+20230508	10:41:27	4fbf8c2c-e32f-459a-ad65-b9b611f113b0	Error: ENOENT: no such file or directory, stat 'C:\Users\rafas\OneDrive\Desktop\server\views\404.html'
+20230508	10:41:27	6fdc301f-8db0-4ca8-8db6-6b09e986ea6b	Error: ENOENT: no such file or directory, stat 'C:\Users\rafas\OneDrive\Desktop\server\views\404.html'

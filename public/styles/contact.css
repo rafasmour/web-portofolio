@@ -1,0 +1,50 @@
+/* contact form properties to contain content*/
+.contact-form{
+    background: linear-gradient(to bottom right, rgba(128, 58, 0, 0.9) 0%, rgba(238, 236, 130, 0.9) 100%);
+    margin-top: 2vh;
+    margin-bottom: 5%;
+    width: fit-content;
+    height:fit-content;
+    margin-inline: auto;
+    border-radius: 2%;
+    padding: 0;
+    overflow: hidden;
+}
+/* target input fields and give them proper size */
+#e-mail{
+    width: 50vw;
+}
+#name{
+    width: 50vw;
+}
+#message{
+    position: relative;
+    width: 50.2vw;
+    height: 30vh;
+    resize: none;
+}
+.contact-button{
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
+    cursor: pointer;
+}
+/* change font and font-size for input fields*/
+.form-input{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:lighter;
+    font-size: clamp(.5rem, 1.5vw, 2rem);
+}
+/* grid to display contact info */
+.iframe{
+    width: 50vw;
+    height: 70vh;
+    overflow: none;
+    border: none;
+    margin: 0;
+}
+@media only screen and (max-width: 1024px) {
+    .iframe{
+        width: 70vw;
+    }
+}
